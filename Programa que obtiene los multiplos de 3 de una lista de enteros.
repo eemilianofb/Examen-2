@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+//Programa que obtiene los multiplos de 3 de una lista de enteros.
+
+int main(){
+	int numeros = 1;
+	char opcion1;
+
+	printf("Quieres saber los\033[32m numeros multiplos de 3\033[0m del 1 al 100?\n");
+    scanf("%c", &opcion1);
+
+    if (opcion1 == 'S' || opcion1 == 's' || opcion1 == 'SI' || opcion1 == 'si' || opcion1 == 'Si') {
+        
+		printf("Aquí están todos los\033[32m numeros impares \033[0mdel 1 al 50:\n");
+       
+	    while (numeros <= 100) {
+            
+		if (numeros % 3 == 0) {
+                
+		printf(" %d \n", numeros); 
+		}
+            numeros++;
+        }
+       printf("Estos son tus numeros impares");
+       
+    } else {
+        printf("No se mostraron \033[32m numeros multiplos de 3\033[0m.\n");
+    }
+    return 0;
+}
