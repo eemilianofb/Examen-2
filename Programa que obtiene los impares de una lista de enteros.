@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+//Programa que obtiene los impares de una lista de enteros.
+
+int main(){
+	int n;
+	int numeros = 1;
+	char opcion;
+
+	printf("Quieres saber los \033[32m numeros impares\033[0m del 1 al 50?\n");
+    scanf("%c", &opcion);
+
+    if (opcion == 'S' || opcion == 's' || opcion == 'SI' || opcion == 'si' || opcion == 'Si') {
+        
+		printf("Aquí están todos los\033[32m numeros impares \033[0mdel 1 al 50:\n");
+       
+	    while (numeros <= 50) {
+            
+		if (numeros % 2 != 0) {
+                
+		printf(" %d \n", numeros); 
+		}
+		
+            numeros++;
+        }
+       printf("Estos son tus numeros impares");
+       
+    } else {
+        printf("No se mostraron \033[32m numeros impares\033[0m.\n");
+    }
+
+    return 0;
+}
