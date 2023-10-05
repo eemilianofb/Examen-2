@@ -1,0 +1,38 @@
+//ano bisiesto
+
+#include <stdio.h>
+
+int main() {
+int continuar = 1;
+ int bisiesto = 0;
+ 
+while (continuar) {
+        
+    printf("Deseas saber si un ano es \033[32mbisiesto\033[0m?\n");
+    printf("Elige un numero\n");
+    printf("1. Si\n");
+    printf("2. No\n");
+    printf("\n");
+    printf("Seleccione una opcion: ");
+    printf("\n\n");
+    scanf("%d", &continuar);
+
+    if (continuar == 1) {
+    	printf("\n");
+        printf("Ingrese el ano que desea verificar: ");
+        printf("\n\n");
+        scanf("%d", &bisiesto);
+
+        if ((bisiesto % 4 == 0 && bisiesto % 100 != 0) || bisiesto % 400 == 0) {
+            printf("Es bisiesto\n");
+        } else {
+            printf("No es bisiesto\n");
+            printf("\n\n");
+        }
+    } else if (continuar != 2) {
+        printf("Opcion no valida. Seleccione 1 para continuar o 2 para salir.\n\n");
+    }
+}
+
+    return 0;
+}
