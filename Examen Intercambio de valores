@@ -2,28 +2,36 @@
 
 #include<stdio.h>
 
-int main (){
-int v1 = 0;
-int v2 = 0;
-int v3 = 0;
+int main () {
+    int v1 = 0;
+    int v2 = 0;
+    int v3 = 0;
 
-//Guardar V1, V2 y V3
-	printf("Dame el primer numero del valor v1:\n");
-	scanf("%d",&v1);
-	
-	printf("Dame el segundo numero del valor v2:\n");
-	scanf("%d",&v2);
-	
-	printf("Dame el tercer numero del valor v3:\n");
-	scanf("%d",&v3);
-	
-	printf("\n\n");
-	
-	printf("Aqui estan tus valores cambiados\n\n");
-	
-	printf("Valor 1: %d \n",v3);
-	printf("Valor 2: %d \n",v1);
-	printf("Valor 3: %d \n",v2);
-	
-	return 0;
+    int vf1 = 0;
+    int vf2 = 0;
+    int vf3 = 0;
+
+    printf("Dame el primer numero del valor v1:\n");
+    scanf("%d", &v1);
+
+    printf("Dame el segundo numero del valor v2:\n");
+    scanf("%d", &v2);
+
+    printf("Dame el tercer numero del valor v3:\n");
+    scanf("%d", &v3);
+
+    printf("\n\n");
+
+    
+    vf1 = v1;
+    vf2 = v2;
+    vf3 = v3;
+
+    printf("Aqui estan tus valores cambiados\n\n");
+
+    printf("Valor 1: %d \n", vf3);
+    printf("Valor 2: %d \n", vf1);
+    printf("Valor 3: %d \n", vf2);
+
+    return 0;
 }
