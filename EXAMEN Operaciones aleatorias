@@ -1,0 +1,64 @@
+//Operaciones aleatorias
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+int elecciones;
+int continuar = 1;
+
+while (continuar) {
+    printf("Deseas que el programa realice \033[32moperaciones aleatorias\033[0m?\n");
+    printf("Elige un numero\n");
+    printf("1. Si\n");
+    printf("2. No\n");
+    printf("\n");
+    printf("Seleccione una opcion: ");
+    printf("\n");
+    scanf("%d", &continuar);
+
+    if (continuar == 1) {
+        srand(time(0));
+
+        while (1) {
+            elecciones = rand() % 5 + 1;
+            int num1 = rand() % 11;
+            int num2 = rand() % 11;
+
+            switch (elecciones) {
+            	printf("\n\n");
+                case 1:
+                    printf("%d + %d = %d\n\n", num1, num2, num1 + num2);
+                    break;
+
+                case 2:
+                    printf("%d - %d = %d\n\n", num1, num2, num1 - num2);
+                    break;
+
+                case 3:
+                    printf("%d * %d = %d\n\n", num1, num2, num1 * num2);
+                    break;
+
+                case 4:
+                    printf("%d / %d = ", num1, num2);
+                    if (num2 != 0) {
+                        printf("%.2f\n\n", (double)num1 / num2);
+                    } else {
+                        printf("No se puede dividir por 0.\n\n");}
+                    break;
+
+                case 5:
+                    printf("Programa terminado.\n\n");
+                    break;}
+
+            if (elecciones == 5) {
+                break;}
+        }
+    } else if (continuar == 2) {
+        printf("Programa terminado.\n");
+        break;
+    } else {
+        printf("Opcion no valida. Por favor, elige 1 para continuar o 2 para salir.\n");}
+	}
+    return 0;
+}
